@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+}
+
+group 'jp.gr.java_conf.uzresk.appium'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.testng:testng:7.1.0'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+    testImplementation 'io.appium:java-client:8.3.0'
+    // https://mvnrepository.com/artifact/commons-io/commons-io
+    implementation group: 'commons-io', name: 'commons-io', version: '2.11.0'
+}
+
+test {
+    useJUnitPlatform()
+}
